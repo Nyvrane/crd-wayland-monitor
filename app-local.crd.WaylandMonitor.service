@@ -1,6 +1,6 @@
 [Unit]
 Description=Chrome Remote Desktop (existing Wayland desktop)
-After=graphical-session.target xdg-desktop-portal.service
+After=graphical-session-pre.target
 PartOf=graphical-session.target
 
 [Service]

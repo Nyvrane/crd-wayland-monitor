@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+*.so
+portal-monitor-test
+settings.json
+portal-token
+*.backup.json
+dist/

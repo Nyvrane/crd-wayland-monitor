@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Chrome Remote Desktop (Wayland)
+Name[tr]=Chrome Uzaktan Masaüstü (Wayland)
+Comment=Share the existing local Wayland desktop through Chrome Remote Desktop
+Icon=preferences-desktop-remote-desktop
+Exec=python3 -c "import pathlib,runpy;runpy.run_path(str(pathlib.Path.home()/'.local/lib/crd-wayland-monitor/launch.py'),run_name='__main__')"
+NoDisplay=true
+Terminal=false
+Categories=Network;RemoteAccess;

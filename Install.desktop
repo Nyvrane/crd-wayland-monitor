@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Install Chrome Remote Desktop Wayland Monitor
+Name[tr]=Chrome Wayland Ekran Paylaşımını Kur
+Comment=Configure an existing Chrome Remote Desktop registration for the current KDE Wayland desktop
+Icon=preferences-desktop-remote-desktop
+Exec=python3 -c "import pathlib,sys,runpy,urllib.parse;p=pathlib.Path(urllib.parse.unquote(urllib.parse.urlparse(sys.argv[1]).path)).resolve().parent/'install.py';sys.argv=[str(p)];runpy.run_path(str(p),run_name='__main__')" %k
+Terminal=true
+Categories=Network;

@@ -1,0 +1,17 @@
+[Unit]
+Description=Chrome Remote Desktop (existing Wayland desktop)
+After=graphical-session.target xdg-desktop-portal.service
+PartOf=graphical-session.target
+
+[Service]
+Type=exec
+ExecStart=/usr/bin/python3 %h/.local/lib/crd-wayland-monitor/launch.py
+Environment=XDG_RUNTIME_DIR=%t
+Environment=DBUS_SESSION_BUS_ADDRESS=unix:path=%t/bus
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=20
+UMask=0077
+
+[Install]
+WantedBy=plasma-workspace.target
